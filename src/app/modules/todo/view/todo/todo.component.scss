@@ -1,0 +1,67 @@
+@import '../../../../../assets/styles/definitions.scss';
+.header {
+    text-align: center;
+    padding: 20px 0 20px;
+    color: white;
+
+    .mat-form-field {
+        width: 60%;
+    }
+}
+
+.settings {
+    padding: 10px 0 0 20px;
+    background-color: $settings-background;
+}
+
+.todo-list-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    .item {
+        animation-name: todos;
+        animation-duration: 1s;
+        width: 95%;
+        margin-top: 10px;
+        color: #0f4c4b;
+        background: #26bfbd;
+        padding: 5px 20px 0px 20px;
+
+        &.checked {
+            background: #cccc;
+            opacity: 0.8;
+        }
+
+        &.high-priority {
+            border-top: 3px solid red;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .text-field {
+            width: 50%;
+            margin-left: 10px;
+        }
+    }
+}
+  
+@keyframes todos {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
